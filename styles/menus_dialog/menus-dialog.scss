@@ -1,0 +1,181 @@
+@import '../variables/color/color-variable.scss';
+
+.menus-container-dialog{
+    display:none;
+    align-items:center;
+    justify-content:center;
+    background-color: #00000080;
+    -webkit-backdrop-filter: blur(10px);
+     backdrop-filter: blur(10px);
+    position:fixed;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    z-index: 5;
+    
+    .menus{
+        width:clamp(10rem, calc(20vw + 35rem), 45rem);
+        height:auto;
+        border-radius:1rem;
+        background-color: rgb(246, 236, 226);
+        z-index: 7;
+        .menus-header{
+            display:flex;
+            justify-content: space-between;
+            border-bottom: 1px solid lightgray;
+            padding:calc(1rem + 4px);
+            margin-bottom:0.1rem;
+
+            h2{
+                font-size: calc(1rem + 4px);
+                font-family: 'Playfair Display', sans-serif,serif;
+                margin:0;
+            }
+            button{
+                border:none;
+                background: transparent;
+                color:gray;
+                padding:0;
+                transition: color 1s ease;
+                &:hover{
+                    color: black;
+                }
+                svg{
+                    width:20px;
+                    height:20px;
+                }
+            }
+        }
+        .product-cards-container{
+            display:grid;
+            grid-template-columns: repeat(2, 1fr);
+            padding:calc(1rem + 4px);
+            gap:1rem;
+            .menu-cards{
+                width:100%;
+                display:flex;
+                align-items: center;
+                padding:1rem;
+                column-gap:0.7rem;
+                border: 1px solid lightgray;
+                border-radius:calc(1rem - 2px);
+                .product-img{
+                    width:80px;
+                    height:80px;
+                    border-radius:1rem;
+                    overflow: hidden;
+                    img{
+                        width: 100%;
+                        height:100%;
+                    }
+                }
+                .product-details{
+                    flex: 1;
+                    .products-header{
+                        h3{
+                            margin:0;
+                            font-family: 'Playfait Display', sans-serif, serif;
+                            font-size:calc(1rem - 2px);
+                        }
+                        p{
+                            margin:0;
+                            margin-top:0.1rem;
+                            font-size: calc(1rem - 4px);
+                        }
+                    }
+                    .price.increase-quantity{
+                        display: flex;
+                        justify-content: space-between;
+                        margin-top:0.8rem;
+
+                        h3{
+                            margin:0;
+                            font-size: calc(1rem - 2px);
+                            color:$tertiary-color;
+                        }
+                       .menu-dialog-cart-action{
+                        display:flex;
+                        height:28px;
+                        column-gap:0.5rem;
+                        button.decrease-cart-count-btn{
+                            width:28px;
+                            height:28px;
+                            border:none;
+                            background-color:#F4E8DD;
+                            border-radius:14px;
+                            svg{
+                                width:12px;
+                                height:12px;
+                            }
+                        }
+                        p{
+                            margin:0;
+                            align-content: center;
+                        }
+                         button.increase-cart-count-btn{
+                            display: flex;
+                            width: auto;
+                            height: 24px;
+                            justify-content: center;
+                            align-items: center;
+                            column-gap: 0.5rem;
+                            border-radius: 2rem;
+                            background-color: $tertiary-color;
+                            color:white;
+                            font-size:calc(1rem - 4px);
+                            border:none;
+                            text-transform: capitalize;
+                            svg{
+                                vertical-align: middle;
+                                width:12px;
+                                height:12px;
+                            }
+                        }
+                       }
+                    }
+                }
+            }
+        }
+        .product-card-footer{
+            margin-top:0.3rem;
+            padding:1rem;
+            .product-price.product-count{
+                display: flex;
+                justify-content:space-between;
+                margin-bottom:1rem;
+                .products-count{
+                    font-size:calc(1rem - 2px);
+                    color:#7E6F67;
+                    margin:0;
+                    font-weight: 500;
+                }
+                .total-price{
+                    margin:0;
+                }
+            }
+            button{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+                height:48px;
+                border-radius: 2rem;
+                font-family: 700;
+                text-transform: uppercase;
+                background-color: $tertiary-color;
+                color:$primary-color;
+                column-gap: 0.7rem;
+                border: none;
+                &:hover{
+                    background-color:rgb(198, 134, 51);
+                }
+                svg{
+                    vertical-align: middle;
+                    width:16px;
+                    height:16px;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,156 @@
+@import '../../variables/color/color-variable';
+#main-content{
+    width: 100%;
+    max-width: 100vw;
+    overflow: hidden;
+    #hero{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: calc(100vh  - (1vh - 7px) );
+        max-height: 100%;
+        padding:0;
+        overflow: hidden;
+        .hero-image{
+            position: absolute;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            max-height: 100%;
+            object-fit: cover;
+            object-position: center;
+            z-index: -1;
+        }
+
+        .darken-hero-bg{
+            position: absolute;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            max-height: 100%;
+            background-color: #1f1f1f99;
+            z-index: 1;
+        }
+        
+        .hero-copy{
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 0 1rem;
+            z-index: 2;
+            @media screen and (max-width: 500px) {
+                width: 100%;
+            }
+            .eyebrow-text{
+                width: 100%;
+                color: $tertiary-color;
+                font-size: calc(1rem - 2px);
+                text-transform: uppercase;
+                letter-spacing: 0.3rem;
+                text-align: center;
+                margin: 0 0 1rem 0;
+                font-weight: 650;
+            }
+
+            h1#hero-heading{
+                width: 100%;
+                color: $primary-color;
+                font-size: clamp(1.5rem, calc(1vw + 3rem ), 5rem);
+                text-align: center;
+                margin-top: 0;
+                margin-bottom: 1rem;
+                font-family: 'Playfair Display', serif;
+                .highlight-text{
+                    color: $tertiary-color;
+                }
+            }
+
+            p.hero-description{
+                width: 100%;
+                color: $secondary-color;
+                font-size: calc(1.4rem - 0.2rem );
+                text-align: center;
+                margin-top: 0;
+                margin-bottom: 2.5rem;
+                letter-spacing: 1px;
+                line-height: 1.5rem;
+            }
+
+            .hero-actions{
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                column-gap: 1.5rem;
+
+                .primary-button, 
+                .secondary-link{
+                    width: 10rem;
+                    height:48px;
+                    border-radius: 30px;
+                    border: none;
+                    font-weight: 700;
+                    font-size: calc(1rem - 2px);
+                    letter-spacing: 1px;
+                    cursor: pointer;
+                }
+                .primary-button{
+                    background-color: $tertiary-color;
+                    color: $primary-color;
+                    text-transform: uppercase;
+                }
+                .secondary-link{
+                    text-align: center;
+                    align-content: center;
+                    border: 1px solid $secondary-color;
+                    color: $primary-color;
+                    text-decoration: none;
+                    text-transform: uppercase;
+                    transition: all 0.3s ease;
+                    &:hover{
+                        border: 1px solid $tertiary-color;
+                        color: $tertiary-color;
+                    }
+                }
+                @media screen and (max-width:640px) {  
+                        align-items: center;            
+                        flex-direction: column;
+                        row-gap: 1rem;
+                }
+            }
+        }
+
+        .product-message-container{
+            width: 22.25rem;
+            height:3.19375rem;
+            display:flex;
+            padding:1rem;
+            background-color:#F8F5F1;
+            border-radius:0.6rem;
+            font-size:calc(1rem - 3px);
+            position: fixed;
+            right:30px;
+            bottom: 35px;
+            column-gap:0.5rem;
+            z-index: 12;
+
+            span{
+                display: inline-block;
+                width:20px;
+                height:20px;
+                color:white;
+                background-color:black;
+                border-radius:10px;
+                text-align: center;
+                align-content: center;
+            }
+
+            p{
+                margin:0;
+                align-content:center;
+            }
+        }
+    }
+
+}

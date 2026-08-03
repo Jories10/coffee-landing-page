@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Playfair+Display+SC:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import './normalize/node_modules/normalize.css/normalize.css';
+@import './header/header.scss';
+@import './Main/hero/hero.scss';
+@import './Main/about_us/about.scss';
+@import './Main/menu/menu.scss';
+@import './Main/testimonials/testimonials.scss';
+@import './Main/testimonials/swipper/swipper.scss';
+@import './Main/contact/contact.scss';
+@import './footer/footer.scss';
+@import './menus_dialog/menus-dialog.scss';
+@import './cart_dialog/cart-dialog.scss';
+@import './form_dialog/form-dialog.scss';
+
+
+*{
+    box-sizing: border-box;
+}
+body{
+    width:100%;
+    max-width: 100vw;
+    height: auto;
+    font-size: 16px;
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    font-variation-settings:
+        "wdth" 100;
+    overflow-x: hidden;
+    overflow-y: auto;
+    scroll-behavior: smooth;
+}

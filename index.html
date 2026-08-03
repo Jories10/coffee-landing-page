@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Brew & Bean coffee landing page with featured menu, testimonials, and contact details.">
+    <title>Brew & Bean</title>
+    <link rel="icon" href="./images/coffee-svgrepo-com-favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="./styles/general.css">
+</head>
+<body>
+    <header id="site-header">
+        <div class="brand-logo">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="site-logo" aria-hidden="true"><path d="M10 2v2"></path><path d="M14 2v2"></path><path d="M16 8a1 1 0 0 1 1 1v8a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4V9a1 1 0 0 1 1-1h14a4 4 0 1 1 0 8h-1"></path><path d="M6 2v2"></path></svg>
+            <span class="brand-name">Brew & Bean</span>
+        </div>
+
+        <nav id="primary-navigation" aria-label="Main site navigation">
+            <ul class="nav-list">
+                <li class="nav-item"><a class="nav-link" href="#hero">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="#menu">Menu</a></li>
+                <li class="nav-item"><a class="nav-link" href="#testimonials">Testimonials</a></li>
+                <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+
+        <div class="header-actions">
+           <div class="transaction-history-container">
+                <a class="transaction-history" href="./pages/transaction-history.html" aria-label="View order history" title="transaction history">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"></path><path d="M3 3v5h5"></path><path d="M12 7v5l4 2"></path></svg>
+                </a>
+           </div>
+            <button type="button" class="cart-btn wide-screen-cart-btn" aria-label="View shopping cart" id="cart-button" title="view cart">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="8" cy="21" r="1"></circle><circle cx="19" cy="21" r="1"></circle><path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"></path></svg>
+            </button>
+            <button type="button" class="primary-button" id="header-order-button">Order Now</button>
+        </div>
+
+        <div class="mobile-responsive-nav-container">
+            <div class="cart-icon-container">
+                <button type="button" class="cart-btn small-screen-cart-btn" title="cart-btn" >
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-shopping-cart w-5 h-5"><circle cx="8" cy="21" r="1"></circle><circle cx="19" cy="21" r="1"></circle><path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"></path></svg>
+                </button>
+            </div>
+            <input type="checkbox" id="responsive-nav" aria-label="responsive-nav">
+            <label for="responsive-nav"class="remove-responsive-nav">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-menu w-6 h-6"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg>
+            </label>
+            <nav id="mobile-responsive-nav" aria-label="Primary Mobile Navigation">
+                <ul class="nav-list">
+                    <li class="nav-item"><a class="nav-link" href="#hero">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#menu">Menu</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#testimonials">Testimonials</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                    <li class="nav-item"><a href="./pages/transaction-history.html">Transaction History</a></li>
+                </ul>
+                <button type="button" class="primary-button">Order Now</button>
+             </nav>
+        </div>
+    </header>
+
+    <main id="main-content">
+        <section id="hero" class="hero-section" aria-labelledby="hero-heading">
+            <img src="./images/hero-img-background-coffee-BGh5q_GS.jpg" alt="Customers enjoying coffee in a warm cafe" class="hero-image">
+            <div class="darken-hero-bg"></div>
+            <div class="hero-copy">
+                <p class="eyebrow-text">Welcome to Brew & Bean</p>
+                <h1 id="hero-heading" class="hero-title">Freshly Brewed <span class="highlight-text">Happines</span></h1>
+                <p class="hero-description">Handcrafted coffee made from the finest beans, served in a space designed for comfort and connection.</p>
+                <div class="hero-actions">
+                    <button type="button" class="primary-button order-now" id="hero-order-button">Order Now</button>
+                    <a class="secondary-link" href="#menu">View Menu</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="about-section" aria-labelledby="about-heading">
+            <div class="about-media">
+                <img src="./images/about-coffee-4x4evTFm.jpg" alt="Barista preparing espresso behind the counter" class="about-image">
+                <div class="about-highlight">
+                    <h2>10+</h2>
+                    <p>Years of craft</p>
+                </div>
+            </div>
+
+            <div class="about-copy">
+                <p class="section-label">Our story</p>
+                <h2 id="about-heading">A Passion for <span class="highlight-text">perfect coffee</span></h2>
+                <p class="about-description">Born from a love of exceptional coffee, Brew & Bean has been serving handcrafted beverages since 2014. We believe every cup tells a story — from the farms where our beans are grown to the moment it reaches your hands.</p>
+
+                <div class="feature-grid">
+                    <article class="feature-card">
+                        <div class="feature-icon" aria-hidden="true">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feature-svg"><path d="M10.165 6.598C9.954 7.478 9.64 8.36 9 9c-.64.64-1.521.954-2.402 1.165A6 6 0 0 0 8 22c7.732 0 14-6.268 14-14a6 6 0 0 0-11.835-1.402Z"></path><path d="M5.341 10.62a4 4 0 1 0 5.279-5.28"></path></svg>
+                        </div>
+                        <div class="feature-header">
+                            <h3 class="feature-title">Fresh beans</h3>
+                            <p class="feature-description">Sourced from the world's finest farms</p>
+                        </div>
+                    </article>
+
+                    <article class="feature-card">
+                        <div class="feature-icon" aria-hidden="true">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feature-svg"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"></path></svg>
+                        </div>
+                        <div class="feature-header">
+                            <h3 class="feature-title">Cozy space</h3>
+                            <p class="feature-description">Designed for comfort and warmth</p>
+                        </div>
+                    </article>
+
+                    <article class="feature-card">
+                        <div class="feature-icon" aria-hidden="true">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feature-svg"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M22 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+                        </div>
+                        <div class="feature-header">
+                            <h3 class="feature-title">Friendly service</h3>
+                            <p class="feature-description">Passionate baristas who care</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="menu" class="menu-section" aria-labelledby="menu-heading">
+            <div class="menu-header">
+                <p class="section-label">Our menu</p>
+                <h2 id="menu-heading">Crafted with <span class="highlight-text">love</span></h2>
+            </div>
+
+            <div class="menu-filters"  aria-label="Menu categories">
+                <label for="menu-filter-all" class="filter-button">
+                    <input type="radio" checked class="filter filter-button" name="choice" id="menu-filter-all">
+                    All
+                </label>
+
+                <label for="menu-filter-hot" class="filter-button">
+                    <input type="radio" class="filter filter-button" name="choice" id="menu-filter-hot">
+                    Hot coffee
+                </label>
+
+                <label for="menu-filter-cold" class="filter-button">
+                    <input type="radio" class="filter filter-button" name="choice" id="menu-filter-cold">
+                    Cold brew
+                </label>
+
+                <label for="menu-filter-pastries" class="filter-button">
+                    <input type="radio" class="filter filter-button" name="choice" id="menu-filter-pastries">
+                    Pastries
+                </label>
+            </div>
+
+            <div class="menu-grid">
+                <article class="menu-card all hot" aria-labelledby="classic-espresso-title">
+                    <img src="./images/menu-images/menu-espresso-hp7TejoH.jpg" alt="Classic espresso" class="menu-image">
+                    <div class="menu-card-header">
+                        <h3 class="menu-item-title" id="classic-espresso-title">Classic Espresso</h3>
+                        <span class="menu-item-price" id="classic-espresso-price">$3.50</span>
+                    </div>
+                    <p class="menu-item-description">Rich and bold double shot</p>
+                   <div class="add-to-cart-btn-container">
+                         <button type="button" class="secondary-button add-to-cart-btn" id="classic-espresso-add">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-shopping-cart w-4 h-4"><circle cx="8" cy="21" r="1"></circle><circle cx="19" cy="21" r="1"></circle><path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"></path></svg>
+                        Add to cart
+                    </button>
+                   </div>
+                </article>
+
+                <article class="menu-card all hot caramel-latte" aria-labelledby="caramel-latte-title">
+                    <img src="./images/menu-images/menu-latte-lRESFrYX.jpg" alt="Caramel latte" class="menu-image">
+                    <div class="menu-card-header">
+                        <h3 class="menu-item-title" id="caramel-latte-title">Caramel Latte</h3>
+                        <span class="menu-item-price" id="caramel-latte-price">$5.00</span>
+                    </div>
+                    <p class="menu-item-description">Smooth espresso with caramel</p>
+                    <div class="add-to-cart-btn-container">
+                        <button type="button" class="secondary-button add-to-cart-btn" id="caramel-latte-add"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-shopping-cart w-4 h-4"><circle cx="8" cy="21" r="1"></circle><circle cx="19" cy="21" r="1"></circle><path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"></path></svg>Add to cart</button>
+                    </div>
+                </article>
+
+                <article class="menu-card all hot" aria-labelledby="cappuccino-title">
+                    <img src="./images/menu-images/menu-cappuccino-CtgJ1bPD.jpg" alt="Cappuccino" class="menu-image">
+                    <div class="menu-card-header">
+                        <h3 class="menu-item-title" id="cappuccino-title">Cappuccino</h3>
+                        <span class="menu-item-price" id="cappuccino-price">$4.50</span>
+                    </div>
+                    <p class="menu-item-description">Perfectly frothed milk and espresso</p>
+                    <div class="add-to-cart-btn-container">
+                        <button type="button" class="secondary-button add-to-cart-btn" id="cappuccino-add"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-shopping-cart w-4 h-4"><circle cx="8" cy="21" r="1"></circle><circle cx="19" cy="21" r="1"></circle><path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"></path></svg>Add to cart</button>
+                    </div>
+                </article>
+
+                <article class="menu-card all hot" aria-labelledby="mocha-delight-title">
+                    <img src="./images/menu-images/menu-mocha-DxwhMQ5p.jpg" alt="Mocha delight" class="menu-image">
+                    <div class="menu-card-header">
+                        <h3 class="menu-item-title" id="mocha-delight-title">Mocha Delight</h3>
+                        <span class="menu-item-price" id="mocha-delight-price">$5.50</span>
+                    </div>
+                    <p class="menu-item-description">Chocolate and espresso bliss</p>
+                    <div class="add-to-cart-btn-container">
+                        <button type="button" class="secondary-button add-to-cart-btn" id="mocha-delight-add"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-shopping-cart w-4 h-4"><circle cx="8" cy="21" r="1"></circle><circle cx="19" cy="21" r="1"></circle><path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"></path></svg>Add to cart</button>
+                    </div>
+                </article>
+
+                <article class="menu-card all cold" aria-labelledby="iced-cold-brew-title">
+                    <img src="./images/menu-images/menu-coldbrew-n9kQme9p.jpg" alt="Iced cold brew" class="menu-image">
+                    <div class="menu-card-header">
+                        <h3 class="menu-item-title" id="iced-cold-brew-title">Iced Cold Brew</h3>
+                        <span class="menu-item-price" id="iced-cold-brew-price">$4.50</span>
+                    </div>
+                    <p class="menu-item-description">Slow-steeped for 16 hours</p>
+                    <div class="add-to-cart-btn-container">
+                        <button type="button" class="secondary-button add-to-cart-btn" id="iced-cold-brew-add"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-shopping-cart w-4 h-4"><circle cx="8" cy="21" r="1"></circle><circle cx="19" cy="21" r="1"></circle><path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"></path></svg>Add to cart</button>
+                    </div>
+                </article>
+
+                <article class="menu-card all pastries" aria-labelledby="butter-croissant-title">
+                    <img src="./images/menu-images/menu-pastry-BcFEzjLC.jpg" alt="Butter croissant" class="menu-image">
+                    <div class="menu-card-header">
+                        <h3 class="menu-item-title" id="butter-croissant-title">Butter Croissant</h3>
+                        <span class="menu-item-price" id="butter-croissant-price">$3.00</span>
+                    </div>
+                    <p class="menu-item-description">Flaky, golden, fresh-baked</p>
+                    <div class="add-to-cart-btn-container">
+                        <button type="button" class="secondary-button add-to-cart-btn" id="butter-croissant-add"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-shopping-cart w-4 h-4"><circle cx="8" cy="21" r="1"></circle><circle cx="19" cy="21" r="1"></circle><path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"></path></svg>Add to cart</button>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section id="testimonials" class="testimonial-section" aria-labelledby="testimonials-heading">
+            <div class="testimonials-wrap ">
+                    <div class="testimonial-header">
+                        <p class="section-label">Testimonial</p>
+                        <h2 id="testimonials-heading">What our guests say</h2>
+                    </div>
+
+                    <div class="testimonial-grid corousel" id="client-testimonials">
+                        
+                    </div>
+
+                    <div class="testimonial-controls">
+                        <button type="button" id="prev" class="icon-button" aria-label="Previous-testimonial">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 18-6-6 6-6"></path></svg>
+                        </button>
+                        <div class="testimonial-pagination " aria-hidden="true">
+                           
+                        </div>
+                        <button type="button" id="next" class="icon-button " aria-label="Next-testimonial">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"></path></svg>
+                        </button>
+                    </div>
+
+                    <div class="share-experience-wrap">
+                        <button type="button" class="secondary-button" id="share-experience-button">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path><path d="M12 7v6"></path><path d="M9 10h6"></path></svg>
+                            Share your experience
+                        </button>
+                        <div class="share-experience-form-wrap">
+                            <form id="testimonial-form">
+                                <button type="button" id="exit-btn" aria-label="exit button">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-x h-4 w-4"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg>
+                                </button>
+                                <fieldset class="testimonial-form-header">
+                                    <h2>share your testimonial</h2>
+                                    <p>We'd love to hear about your experience!</p>
+                                </fieldset>
+                                <fieldset class="testimonial-author-name">
+                                    <label for="testimonial-name">Your Name</label>
+                                    <input type="text" id="testimonial-name" placeholder="Jories Condat" />
+                                </fieldset>
+                                <fieldset class="testimonial-rating">
+                                    <label>
+                                        Rating
+                                        <div class="star-container">
+                                             <input type="checkbox" id="1st-star" class="rating">
+                                             <label for="1st-star">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star w-6 h-6 text-coffee-dark-foreground/30"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg>
+                                            </label>
+                                            
+                                            <input type="checkbox" id="2nd-star" class="rating">
+                                            <label for="2nd-star">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star w-6 h-6 text-coffee-dark-foreground/30"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg>
+                                            </label>
+                                            
+                                            <input type="checkbox" id="3rd-star" class="rating">
+                                            <label for="3rd-star">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star w-6 h-6 text-coffee-dark-foreground/30"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg>
+                                            </label>
+                                            
+                                            <input type="checkbox" id="4rth-star" class="rating">
+                                            <label for="4rth-star">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star w-6 h-6 text-coffee-dark-foreground/30"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg>
+                                            </label>
+                                            
+                                            <input type="checkbox" id="5th-star" class="rating">
+                                            <label for="5th-star">
+                                               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star w-6 h-6 fill-caramel text-caramel"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg>
+                                            </label>
+                                            
+                                        </div>
+                                    </label>
+                                </fieldset>
+                                <fieldset class="testimonial-message">
+                                    <label for="testimonial-text">Your Testimonial</label>
+                                    <textarea id="testimonial-text" placeholder="tell us about your experience"></textarea>
+                                </fieldset>
+                                <button type="submit" id="submit">Submit Testimonial</button>
+                            </form>
+                        </div>
+                    </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact-section" aria-labelledby="contact-heading">
+            <div class="contact-copy">
+                <p class="section-label">Get in touch</p>
+                <h2 id="contact-heading">Visit us <span class="highlight-text">today</span></h2>
+            </div>
+
+            <div class="contact-grid">
+                <div class="contact-details">
+                    <article class="contact-card">
+                        <div class="contact-icon" aria-hidden="true">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="contact-svg"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                        </div>
+                        <div class="contact-header">
+                            <h3>Location</h3>
+                            <p>123 Coffee Lane, Downtown District</p>
+                        </div>
+                    </article>
+
+                    <article class="contact-card">
+                        <div class="contact-icon" aria-hidden="true">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="contact-svg"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                        </div>
+                        <div class="contact-header">
+                            <h3>Hours</h3>
+                            <p>Mon – Fri: 7am – 9pm</p>
+                            <p>Sat – Sun: 8am – 10pm</p>
+                        </div>
+                    </article>
+
+                    <article class="contact-card">
+                        <div class="contact-icon" aria-hidden="true">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="contact-svg"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                        </div>
+                        <div class="contact-header">
+                            <h3>Phone</h3>
+                            <p>09789291912</p>
+                        </div>
+                    </article>
+
+                    <article class="contact-card">
+                        <div class="contact-icon" aria-hidden="true">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="contact-svg"><rect width="20" height="16" x="2" y="4" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg>
+                        </div>
+                        <div class="contact-header">
+                            <h3>Email</h3>
+                            <p>hello@brewandbean.com</p>
+                        </div>
+                    </article>
+
+                    <div class="social-links" aria-label="Follow us on social media">
+                        <a class="social-link" href="#" aria-label="Instagram">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-instagram w-5 h-5"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line></svg>
+                        </a>
+                        <a class="social-link" href="#" aria-label="Facebook">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-facebook w-5 h-5"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+                        </a>
+                        <a class="social-link" href="#" aria-label="Twitter">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-twitter w-5 h-5"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"></path></svg>
+                        </a>
+                    </div>
+                </div>
+
+                <aside class="contact-form-panel">
+                    <form action="" id="contact-form" class="contact-form" method="post">
+                            <input type="hidden" name="access_key" value="c219979f-6951-40ae-b064-4128159a36aa">
+                            <input type="hidden" name="subject" value="New Submission from Web3Forms">
+                            <input type="checkbox" name="botcheck" id="" class="both-check" aria-label="botCheck">
+
+                            <input type="text" id="contact-name" name="name" placeholder="Your name" required>
+                            <input type="email" id="contact-email" name="email" placeholder="Your email" required>
+                            <textarea id="contact-message" name="message" placeholder="Your message" rows="6" required></textarea>
+                            <button type="submit" ><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-send w-4 h-4"><path d="M14.536 21.686a.5.5 0 0 0 .937-.024l6.5-19a.496.496 0 0 0-.635-.635l-19 6.5a.5.5 0 0 0-.024.937l7.93 3.18a2 2 0 0 1 1.112 1.11z"></path><path d="m21.854 2.147-10.94 10.939"></path></svg>Send Message</button>
+                    </form>
+                </aside>
+                <div id="result">hiddden</div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="site-footer">
+        <div class="footer-container">
+            <div class="footer-inner">
+                <div class="footer-brand">
+                   <div class="brand-logo">
+                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="footer-logo" aria-hidden="true"><path d="M10 2v2"></path><path d="M14 2v2"></path><path d="M16 8a1 1 0 0 1 1 1v8a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4V9a1 1 0 0 1 1-1h14a4 4 0 1 1 0 8h-1"></path><path d="M6 2v2"></path></svg>
+                         <span class="brand-name">Brew & Bean</span>
+                   </div>
+                    <p class="footer-description">Handcrafted coffee, made with passion since 2014. Come for the coffee, stay for the warmth.</p>
+                </div>
+
+                <div class="footer-links">
+                    <h2>Quick links</h2>
+                    <ul class="footer-nav">
+                        <li><a href="#hero">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#menu">Menu</a></li>
+                        <li><a href="#testimonials">Testimonials</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-contact-details">
+                    <h2>Contact</h2>
+                    <p>123 Coffee Lane, Downtown</p>
+                    <p>09789291912</p>
+                    <p>hello@brewandbean.com</p>
+                </div>
+            </div>
+
+            <div class="footer-note">
+                <small>© 2026 Brew & Bean. All rights reserved.</small>
+            </div>
+        </div>
+    </footer>
+
+    <script defer src="./script/cafe-brew-bean.js" type="module"></script>
+</body>
+</html>
+                        

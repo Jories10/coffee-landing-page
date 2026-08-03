@@ -1,0 +1,210 @@
+@import '../../variables/color/color-variable.scss';
+
+.contact-section{
+    width:100%;
+    max-width: 100%;
+    height:auto;
+    background-color:#F4E8DD;
+    padding: calc(6.1rem - 0.1rem) 1rem;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    overflow:hidden;
+
+    .contact-copy{
+        width:100%;
+        max-width: 100%;
+        text-align:center;
+        margin-bottom: calc(4rem - 8px);
+        .section-label{
+            font-size:calc(1rem - 2px);
+            color:$tertiary-color;
+            text-transform:uppercase;
+            font-weight:600;
+            letter-spacing:0.2rem;
+        }
+
+        #contact-heading{
+            font-size:calc(4rem - 5px);
+            font-family: 'Playfair Display',sans-serif, serif;
+            margin:0;
+            text-transform:capitalize;
+            .highlight-text{
+                color:$tertiary-color;
+            }
+        }
+    }
+
+    .contact-grid{
+        width:100%;
+        max-width: 100%;
+        height:auto;
+        display:flex;
+        justify-content:space-between;
+        overflow:hidden;
+        @media (max-width: 764px) {
+            flex-direction:column;
+            gap:calc(4rem - 8px);
+        }
+        @media (min-width: 980px){
+            justify-content:center;
+            column-gap:1.5rem;
+        }
+        .contact-details, 
+        .contact-form-panel{
+            width:clamp(13rem, calc(10vw + 22rem), 31rem);
+            height:auto;
+
+            @media(max-width:764px){
+                width:100%;
+            }
+        }
+        .contact-details{
+            .contact-card{
+                display:flex;
+                align-items:center;
+                column-gap:1rem;
+            
+
+                .contact-icon{
+                    width:calc(3.1rem - 1px);
+                    height:calc(3.1rem - 1px);
+                    background-color:#CC8F141A;
+                    display:flex;
+                    justify-content:center;
+                    align-items:center;
+                    border-radius:1rem;
+
+                    svg{
+                        width:24px;
+                        height:24px;
+                        color:$tertiary-color;
+                    }
+                }
+
+                .contact-header{
+                    h3{
+                        margin:0;
+                        color:#38312E;
+                        font-size:1rem;
+                        font-family: 'Playfair Display',sans-serif, serif;
+                        font-weight:600;
+                    }
+                    p{
+                        margin:0;
+                        font-size:calc(1rem - 2px);
+                        color:#7E6F67;
+                    }
+                }
+            }
+
+            .contact-card:not(:first-child){
+                margin-top:2rem;
+            }
+
+            .social-links{
+                margin-top:2rem;
+                padding-top:1rem;
+                display:flex;
+                column-gap:1rem;
+
+                a{
+                    display:inline-flex;
+                    justify-content:center;
+                    align-items:center;
+                    width:2.3rem;
+                    height:2.3rem;
+                    text-decoration:none;
+                    color:$tertiary-color;
+                    background-color:#CC8F141A;
+                    border-radius:50%;
+                    transition:background-color 0.3s, color 0.3s;
+
+                    svg{
+                        width:20px;
+                        height:20px;
+                    }
+
+                    &:hover{
+                        background-color:$tertiary-color;
+                        color:$primary-color;
+                    }
+                }
+            }
+        }
+
+        .contact-form-panel{
+           #contact-form{
+                width:100%;
+                height:100%;
+                padding:2rem;
+                background-color:#F6F2EE;
+                border-radius:1rem;
+                 
+                .both-check{
+                    display:none;
+                }
+                input, textarea{
+                    width:100%;
+                    height:49px;
+                    padding:0.5rem;
+                    margin-bottom:1.3rem;
+                    border:1px solid #ccc;
+                    border-radius:0.5rem;
+
+                    &::placeholder{
+                        text-transform:capitalize;
+                    }
+                }
+                textarea{
+                    resize:none;
+                    height:calc(8rem + 1px);
+                }
+
+                button{
+                    width:100%;
+                    padding:calc(1rem - 2px) 2rem;
+                    border:none;
+                    border-radius:1.5rem;
+                    background-color:$tertiary-color;
+                    color:$primary-color;
+                    text-transform:uppercase;
+                    font-weight:600;
+                    display:inline-flex;
+                    align-items:center;
+                    justify-content:center;
+                    column-gap:0.5rem;
+                    cursor:pointer;
+                    transition:background-color 0.3s;
+
+                    svg{
+                        width:16px;
+                        height:16px;
+                    }
+
+                    &:hover{
+                        background-color:#e39f18;
+                    }
+                }
+
+           }
+        }
+
+        #result{
+            width:auto;
+            height:auto;
+            background-color:$tertiary-color;
+            color:$primary-color;
+            padding:1rem 1rem;
+            border-radius:10px;
+            font-size:calc(1rem - 2px);
+            letter-spacing:0.1rem;
+            text-transform: capitalize;
+            display:none;
+            position: fixed;
+            top:20px;
+            right:15px;
+            z-index:3;
+        }
+    }
+}

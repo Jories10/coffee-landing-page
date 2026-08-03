@@ -1,0 +1,95 @@
+#site-footer {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  padding: 4.1rem 0;
+  background-color: #1f1f1f;
+  position: relative;
+  bottom: 0;
+  color: #f8f1f5;
+}
+#site-footer .footer-container {
+  padding: 0 1rem;
+}
+#site-footer .footer-container .footer-inner {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 40px;
+  row-gap: 2rem;
+}
+@media screen and (max-width: 767px) {
+  #site-footer .footer-container .footer-inner {
+    flex-direction: column;
+  }
+}
+#site-footer .footer-container .footer-inner .footer-brand .brand-logo {
+  display: flex;
+  margin-bottom: 1rem;
+  align-content: center;
+  -moz-column-gap: 0.7rem;
+       column-gap: 0.7rem;
+}
+#site-footer .footer-container .footer-inner .footer-brand .brand-logo svg {
+  color: #cc8f14;
+  width: 24px;
+  height: 24px;
+  vertical-align: middle;
+}
+#site-footer .footer-container .footer-inner .footer-brand .brand-logo span.brand-name {
+  font-size: calc(1rem + 4px);
+  font-family: "Playfair Display", sans-serif, serif;
+  font-weight: 600;
+}
+#site-footer .footer-container .footer-inner .footer-brand p {
+  margin: 0;
+  color: rgba(248, 241, 245, 0.8);
+  font-size: calc(1rem - 2px);
+  line-height: 1.5rem;
+}
+#site-footer .footer-container .footer-inner div {
+  width: clamp(10rem, 10vw + 11.9rem, 20rem);
+}
+#site-footer .footer-container .footer-inner .footer-links h2 {
+  font-size: 1rem;
+  font-family: "Playfair Display", sans-serif, serif;
+  font-weight: 600;
+  margin: 0;
+  margin-bottom: 1rem;
+}
+#site-footer .footer-container .footer-inner .footer-links ul.footer-nav {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+#site-footer .footer-container .footer-inner .footer-links ul.footer-nav li a {
+  text-decoration: none;
+  color: rgba(248, 241, 245, 0.8);
+  font-size: calc(1rem - 2px);
+}
+#site-footer .footer-container .footer-inner .footer-links ul.footer-nav li:not(:first-child) {
+  margin-top: 0.5rem;
+}
+#site-footer .footer-container .footer-inner .footer-contact-details h2 {
+  margin: 0;
+  font-size: 1rem;
+  font-family: "Playfair Display", sans-serif, serif;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+#site-footer .footer-container .footer-inner .footer-contact-details p {
+  margin: 0;
+  color: rgba(248, 241, 245, 0.8);
+  font-size: calc(1rem - 2px);
+}
+#site-footer .footer-container .footer-inner .footer-contact-details p:not(:first-child) {
+  margin-top: 0.5rem;
+}
+#site-footer .footer-container .footer-note {
+  text-align: center;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(211, 211, 211, 0.203);
+}
+#site-footer .footer-container .footer-note small {
+  font-size: calc(1rem - 2px);
+  color: rgba(248, 241, 245, 0.8);
+}/*# sourceMappingURL=footer.css.map */

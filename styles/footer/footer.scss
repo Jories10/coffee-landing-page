@@ -1,0 +1,112 @@
+@import '../variables/color/color-variable.scss';
+
+#site-footer{
+     width: 100%;
+     max-width: 100%;
+     height:auto;
+     padding:4.1rem 0;
+     background-color:#1f1f1f;
+     position: relative;
+     bottom:0;
+     color:$primary-color;
+
+     .footer-container{
+        padding:0 1rem;
+
+        .footer-inner{
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 40px;
+            row-gap:2rem;
+
+            @media screen and (max-width:767px) {
+                flex-direction:column;
+            }
+
+            .footer-brand{
+                .brand-logo{
+                    display:flex;
+                    margin-bottom:1rem;
+                    align-content: center;
+                    column-gap: 0.7rem;
+                    svg{
+                        color:$tertiary-color;
+                        width:24px;
+                        height:24px;
+                        vertical-align:middle;
+                    }
+                    span.brand-name{
+                        font-size:calc(1rem + 4px);
+                        font-family: 'Playfair Display', sans-serif, serif;
+                        font-weight: 600;
+                    }
+                }
+                p{
+                    margin:0;
+                    color:$secondary-color;
+                    font-size:calc(1rem - 2px);
+                    line-height:1.5rem;
+                }
+            }
+
+            div{
+                width:clamp(10rem, calc(10vw + 11.9rem), 20rem);
+            }
+
+             .footer-links{
+                h2{
+                    font-size:1rem;
+                    font-family:'Playfair Display', sans-serif, serif;
+                    font-weight: 600;
+                    margin:0;
+                    margin-bottom: 1rem;
+                }
+                ul.footer-nav{
+                    list-style:none;
+                    padding:0;
+                    margin:0;
+                    li{
+                        a{
+                            text-decoration:none;
+                            color:$secondary-color;
+                            font-size:calc(1rem - 2px);
+                        }
+                        &:not(:first-child){
+                            margin-top:0.5rem;
+                        }
+                    }
+                }
+            }
+
+            .footer-contact-details{
+                h2{
+                    margin:0;
+                    font-size:1rem;
+                    font-family: 'Playfair Display', sans-serif,serif;
+                    font-weight: 600;
+                    margin-bottom:1rem;
+                }
+                p{
+                    margin:0;
+                    color:$secondary-color;
+                    font-size:calc(1rem - 2px);
+                    &:not(:first-child){
+                        margin-top:0.5rem;
+                    }
+                }
+            }
+        }
+
+        .footer-note{
+            text-align: center;
+            padding-top:1.5rem;
+            border-top: 1px solid rgba(211, 211, 211, 0.203);
+            small{
+                font-size:calc(1rem - 2px);
+                color:$secondary-color;
+            }
+        }
+       
+     }
+
+}

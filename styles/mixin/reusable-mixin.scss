@@ -1,0 +1,34 @@
+@mixin padding-for-larger-screen{
+    @media screen and (min-width: 1277px) {@content;}
+}
+
+$medium-screen-size:1024px;
+$large-screen-size:1025px;
+@mixin mobile-responsive-nav($screen-size){
+    @if $screen-size == medium{
+        @media screen and (max-width:1024px){
+             @content;
+        }
+    }
+    @else if $screen-size == large{
+        @media screen and (min-width:1025px){
+            @content;
+        }
+    }
+}
+
+
+@mixin primary-button-design{
+    width: auto;
+    height: 40px;
+    border-radius: 1.2rem;
+    background-color: $tertiary-color;
+    border: none;
+    color: $primary-color;
+    padding: 10px 24px;
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
