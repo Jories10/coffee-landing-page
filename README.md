@@ -1,2 +1,21 @@
-# coffee-landing-page
-I build a coffee landing page to practice my skills on building responsive web application and improve programming fundamental skills using JavaScript. tech stack that I used to build this landing page are HTML, CSS, SASS (CSS preprocessor), JavaScript. Tool I used: Git, Visual Studio Code
+# ☕ Coffee Landing Page
+
+A modern and responsive coffee landing page built to practice front-end web development and responsive UI design.
+
+## 🛠️ Tech Stack
+
+* **HTML5** — Structure
+* **CSS3** — Styling & responsive design
+* **SASS** — Organized and maintainable CSS
+* **JavaScript** — Interactivity
+
+## ✨ Features
+
+* Responsive design
+* Modern coffee-themed UI
+* Interactive navigation
+* Clean and organized code
+
+## 🎯 Purpose
+
+This project was built to strengthen my **HTML, CSS, SASS, and JavaScript** skills while creating a practical front-end project for my portfolio.
